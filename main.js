@@ -1,11 +1,40 @@
+/****************************************************************************
+ Cocos2d-html5 show case : Moon Warriors
+
+ Copyright (c) 2011-2012 cocos2d-x.org
+ Copyright (c) 2013-2014 Chukong Technologies Inc.
+
+ http://www.cocos2d-x.org
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+ @Authors:
+ Programmer: Shengxiang Chen (陈升想), Dingping Lv (吕定平), Ricardo Quesada
+ Effects animation: Hao Wu (吴昊)
+ Quality Assurance: Sean Lin (林顺)
+ ****************************************************************************/
+
 /**
  * A brief explanation for "project.json":
  * Here is the content of project.json file, this is the global configuration for your game, you can modify it to customize some behavior.
  * The detail of each field is under it.
  {
-    "project_type": "javascript",
-    // "project_type" indicate the program language of your project, you can ignore this field
-
     "debugMode"     : 1,
     // "debugMode" possible values :
     //      0 - No message will be printed.
@@ -31,7 +60,7 @@
     //      1 - Forced to use canvas renderer
     //      2 - Forced to use WebGL renderer, but this will be ignored on mobile browsers
 
-    "engineDir"     : "frameworks/cocos2d-html5/",
+    "engineDir"     : "../../frameworks/cocos2d-html5/",
     // In debug mode, if you use the whole engine to develop your game, you should specify its relative path with "engineDir",
     // but if you are using a single engine file, you can ignore it.
 
@@ -48,24 +77,24 @@
  */
 
 cc.game.onStart = function(){
-
-    g_viewWidth = cc.director.getWinSize().width;
-    g_viewHeight = cc.director.getWinSize().height;
-
-    if (cc.sys.isNative) {
-
-    }
-
     cc.view.adjustViewPort(true);
-    cc.view.setDesignResolutionSize(g_viewWidth,g_viewHeight,cc.ResolutionPolicy.SHOW_ALL);
+    cc.view.setDesignResolutionSize(480,720,cc.ResolutionPolicy.SHOW_ALL);
     cc.view.resizeWithBrowserSize(true);
     cc.director.setProjection(cc.Director.PROJECTION_2D);
 
-
+    if (cc.sys.isNative) {
+        var searchPaths = jsb.fileUtils.getSearchPaths();
+        searchPaths.push('script');
+        if (cc.sys.os == cc.sys.OS_IOS || cc.sys.os == cc.sys.OS_OSX) {
+            searchPaths.push("res");
+            searchPaths.push("src");
+        }
+        jsb.fileUtils.setSearchPaths(searchPaths);
+    }
     //load resources
-    cc.LoaderScene.preload(g_loading_resources, function () {
+    cc.LoaderScene.preload(g_mainmenu, function () {
         cc.director.runScene(SysMenu.scene());
-        //cc.director.runScene(new HelloWorldScene());
     }, this);
 };
+
 cc.game.run();
