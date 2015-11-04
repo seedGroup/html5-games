@@ -1,0 +1,24 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d","chipmunk", "extensions"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/Globals.js",
+        "src/Scene/MenuSys.js",
+        "src/Scene/GameScene.js",
+        "src/Layer/BackgroundLayer.js",
+        "src/Class/Role.js",
+        "src/Class/Palette.js",
+        "src/Layer/FogLayer.js",
+        "src/Layer/TouchLayer.js"
+    ]
+}
