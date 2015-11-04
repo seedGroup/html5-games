@@ -1,0 +1,24 @@
+
+
+
+== 还未解决的问题 ======================================================
+ # 页面刚载入时的黑块问题。
+ # 游戏进度条的位置自适应问题：使用this.mProgressBgSpr.getContentSize().width获取的宽度是0，没有获取到进度条背景图片的实际宽度。
+ # 需要取消掉SpriteBatchNode，因为v3.0中不推荐使用这种方式了
+ # FruitAttack/res/HD/res下的baseResource.png和baseResource.plist需要重做，太小了，不适合HD的。
+
+
+== 总结 ======================================================
+ # 在比较复杂的类方法中，使用“var self = this;”是个好习惯，可以避免函数参数中，this不生效的问题
+
+
+
+== 学习 ======================================================
+ # 关于js中的“===”操作符： 
+ 		要是两个值类型不同，返回false 
+ 		要是两个值都是number类型，并且数值相同，返回true 
+ 		要是两个值都是stirng，并且两个值的String内容相同，返回true 
+ 		要是两个值都是true或者都是false，返回true 
+ 		要是两个值都是指向相同的Object，Arraya或者function，返回true 
+ 		要是两个值都是null或者都是undefined，返回true
+
