@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>千元礼服 真情回馈</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="香江丽景" />
+<meta name="keywords" content="企业网站管理系统,微网站建设,手机网站建设,中英文网站建设" />
+<meta name="description" content="本系统集手机站、微信站、电脑站三站合一，各站数据同步、只需一个空间,维护更方便！订购热线：010-88888888" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/swipe.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--顶部开始-->
+<div id="top">
+	<!--频道导航 开始-->
+	<script>
+		window.onload = function () {
+
+			var oWin = document.getElementById("window");
+
+			var oLay = document.getElementById("overlay");
+
+			var oBtn = document.getElementById("popmenu");
+
+			var oClose = document.getElementById("close");
+
+			oBtn.onclick = function () {
+				oLay.style.display = "block";
+				oWin.style.display = "block"
+			};
+
+			oLay.onclick = function () {
+				oLay.style.display = "none";
+				oWin.style.display = "none"
+			}
+
+		};
+	</script>
+	<div style="margin-bottom:55px;">
+		<div id="toolbar">
+			<div class="fixed-black"><a class="ui-btn-back" href="javascript:history.go(-1)"></a><a class="ui-btn-home ui-btn-center"
+				href="/"></a><a class="ui-btn-menu" id="popmenu">最新活动</a>
+			</div>
+		</div>
+		<div id="overlay"></div>
+		<div id="window">
+			<ul class="windowlist">
+				<li><a href="xmjs.html"><span>项目介绍</span></a>
+				</li>
+				<li><a href="ljly.html"><span>丽景掠影</span></a>
+				</li>
+				<li><a href="hxqj.html"><span>户型全景</span></a>
+				</li>
+				<li><a href="zxhd.html"><span>最新活动</span></a>
+				</li>
+				<li><a href="yykf.html"><span>预约看房</span></a>
+				</li>
+				<li><a href="xsdt.html"><span>销售动态</span></a>
+				</li>
+				<li><a href="contactus.html"><span>联系我们</span></a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<!--频道导航 结束-->
+</div>
+<!--顶部结束-->
+<div id="content">
+	<div class="article">
+		<ul class="wxlist">
+			<li>
+				<h1>千元礼服 真情回馈</h1>
+				<div class="InfoTime">2014-09-22 12:05:34</div>
+				<!-- 一键关注已经被屏蔽 开始- <a class="btnWx" onClick="weixinAddContact('csyoudian')"><div class="WxInfo"><img src="" /><div class="WxName">&nbsp;</div><div class="WxID">&nbsp;点击收听：</div><div class="WxArrow"><img src="images/arrow2.png"/></div></div></a>                    一键关注已经被屏蔽 开始-->
+				<div class="InfoPicture">
+					<img src="images/1411358747.jpg" alt="千元礼服 真情回馈" />
+				</div>
+				<div class="InfoContent">1、5.21明星活动嘉宾席门票2张；
+					<br />2、免费获得香江丽景替先生送给太太的千元定制晚礼服一套；
+					<br />3、5.21下午免费为您配合晚礼服化妆造型；
+					<br />4、所有捐赠者，先生与太太可共同走上星光大道红毯并在专属签名墙签名合影留念，全程由摄影师跟踪拍摄&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+					<br
+					/>我们所做的一切只是为了让您以真正的名媛姿态出席5、21晚18:00明星名流爱心夜活动！！！
+					<br />
+					<img alt="" src="images/h5.jpg" />
+					<br />
+					<img alt="" src="images/h6.jpg" />
+					<br />
+					<img alt="" src="images/h7.jpg" />
+					<br />
+					<img alt="" src="images/h8.jpg" />
+					<br />
+				</div>
+			</li>
+		</ul>
+		<!--评论列表 开始-->
+		<script type="text/javascript" src="js/jquery.form.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+
+				$('#frmComment').ajaxForm({
+
+					success: complete,
+
+					dataType: 'json'
+
+				});
+
+
+
+				function complete(data) {
+
+					if (data.status == 1) {
+
+						alert("评论成功!");
+
+						$('#frmComment').resetForm();
+
+					} else if (data.status == 0) {
+
+						alert(data.info);
+
+					}
+
+					ChangeCode();
+
+				};
+
+
+
+				$('#frmComment').submit(function () { // 提交表单
+
+					return false; //为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false  
+
+				});
+
+			});
+		</script>
+		<script type='text/javascript'>
+			function ChangeCode() {
+
+				var timenow = "&t=" + new Date().getTime();
+
+				var obj = document.getElementById('CommentCode');
+
+				if (obj) obj.src = "<>" + timenow;
+
+			}
+		</script>
+		<div class="comment">
+			<ul class="wxlist">
+				<li>
+					<div class="CommentList">
+						<h1>评论列表</h1>
+					</div>
+					<div class="page"></div>
+					<div class="LeaveComment">
+						<h1>我要评论</h1>
+					</div>
+					<form action="/channel/commentadd/l/cn" id="frmComment" method="post">
+						<table border="0px" cellpadding="0px" cellspacing="3px" class="comment_table">
+							<tr>
+								<td class="t1"><span class="required">评论内容*</span>
+								</td>
+								<td class="t2">
+									<textarea id="CommentContent" name="CommentContent"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td class="t1">姓名</td>
+								<td class="t2">
+									<input id="GuestName" name="GuestName" type="text" value="" maxlength="100"
+									/>
+									<input id="GuestID" name="GuestID" type="hidden" value="" maxlength="100"
+									/>
+									<input id="InfoID" name="InfoID" type="hidden" value="218" maxlength="100"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="t1"><span class="required">验证码*</span>
+								</td>
+								<td class="t2">
+									<input id="verifycode" name="verifycode" type="text" class="form_text_verifycode"
+									maxlength="4" />&nbsp;
+									<img src="<>" onclick="ChangeCode()" class="code_image" id="CommentCode"
+									align="absMiddle" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input class="ui-btn-submit" type="submit" name="submit" value="发表评论"
+									/>
+								</td>
+							</tr>
+						</table>
+						<input type="hidden" name="__hash__" value="db70d51f2faca52e3c43b5fc3f2690f5_2f74004d2b65fb6878b19d083fed1c88"
+						/>
+					</form>
+				</li>
+			</ul>
+		</div>
+		<!--评论列表 结束-->
+	</div>
+</div>
+<!--页脚开始-->
+<div id="footer">
+	<!-- 微信分享导引 开始-->
+	<script>
+		function openGuide() {
+			document.getElementById('guide').style.display = 'block';
+		}
+
+		function closeGuide() {
+			document.getElementById('guide').style.display = '';
+		}
+	</script>
+	<div id="guide" onClick="closeGuide()">
+		<img src="images/guide.png">
+	</div>
+	<!-- 微信分享导引 结束-->
+	<div>
+		<ul class="wxlist"><a href="#top"><li><div  class="GoTop"><img src="images/top.png" />回顶部</div></li></a>
+		</ul>
+	</div>
+</div>
+<!--页脚结束-->
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>楼盘简介</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="香江丽景" />
+<meta name="keywords" content="企业网站管理系统,微网站建设,手机网站建设,中英文网站建设" />
+<meta name="description" content="本系统集手机站、微信站、电脑站三站合一，各站数据同步、只需一个空间,维护更方便！订购热线：010-88888888" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/swipe.js" type="text/javascript"></script>
+</head>
+
+<body class="body_single">
+<!--顶部开始-->
+<div id="top">
+	<!--频道导航 开始-->
+	<script>
+		window.onload = function () {
+
+			var oWin = document.getElementById("window");
+
+			var oLay = document.getElementById("overlay");
+
+			var oBtn = document.getElementById("popmenu");
+
+			var oClose = document.getElementById("close");
+
+			oBtn.onclick = function () {
+				oLay.style.display = "block";
+				oWin.style.display = "block"
+			};
+
+			oLay.onclick = function () {
+				oLay.style.display = "none";
+				oWin.style.display = "none"
+			}
+
+		};
+	</script>
+	<div style="margin-bottom:55px;">
+		<div id="toolbar">
+			<div class="fixed-black"><a class="ui-btn-back" href="javascript:history.go(-1)"></a><a class="ui-btn-home ui-btn-center"
+				href="/"></a><a class="ui-btn-menu" id="popmenu">楼盘简介</a>
+			</div>
+		</div>
+		<div id="overlay"></div>
+		<div id="window">
+			<ul class="windowlist">
+				<li><a href="xmjs.html"><span>项目介绍</span></a>
+				</li>
+				<li><a href="ljly.html"><span>丽景掠影</span></a>
+				</li>
+				<li><a href="hxqj.html"><span>户型全景</span></a>
+				</li>
+				<li><a href="zxhd.html"><span>最新活动</span></a>
+				</li>
+				<li><a href="yykf.html"><span>预约看房</span></a>
+				</li>
+				<li><a href="xsdt.html"><span>销售动态</span></a>
+				</li>
+				<li><a href="contactus.html"><span>联系我们</span></a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<!--频道导航 结束-->
+</div>
+<!--顶部结束-->
+<div id="content">
+	<div class="single">
+		<ul class="wxlist">
+			<li>
+				<div class="ChannelName">
+					<h1>楼盘简介</h1>
+				</div>
+				<div class="ChannelContent">
+					<p>香江丽景位于句容市城市中心崇明路中心段，由港资集团背景金润地产于2009年7月成功竞得并启动建设，总占地超过11万平米，分为南北两个地块，总规划建筑面积近30万平米，迄今已完成六期住宅销售，两期商铺销售，品质和销售率均高踞句容前列。</p>
+				</div>
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--页脚开始-->
+<div id="footer">
+	<!-- 微信分享导引 开始-->
+	<script>
+		function openGuide() {
+			document.getElementById('guide').style.display = 'block';
+		}
+
+		function closeGuide() {
+			document.getElementById('guide').style.display = '';
+		}
+	</script>
+	<div id="guide" onClick="closeGuide()">
+		<img src="images/guide.png">
+	</div>
+	<!-- 微信分享导引 结束-->
+	<div>
+		<ul class="wxlist"><a href="#top"><li><div  class="GoTop"><img src="images/top.png" />回顶部</div></li></a>
+		</ul>
+	</div>
+</div>
+<!--页脚结束-->
+</body>
+
+</html>

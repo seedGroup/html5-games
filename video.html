@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>视频介绍</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="香江丽景" />
+<meta name="keywords" content="企业网站管理系统,微网站建设,手机网站建设,中英文网站建设" />
+<meta name="description" content="本系统集手机站、微信站、电脑站三站合一，各站数据同步、只需一个空间,维护更方便！订购热线：010-88888888" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/swipe.js" type="text/javascript"></script>
+</head>
+
+<body class="body_video">
+<!--顶部开始-->
+<div id="top">
+	<!--频道导航 开始-->
+	<script>
+		window.onload = function () {
+
+			var oWin = document.getElementById("window");
+
+			var oLay = document.getElementById("overlay");
+
+			var oBtn = document.getElementById("popmenu");
+
+			var oClose = document.getElementById("close");
+
+			oBtn.onclick = function () {
+				oLay.style.display = "block";
+				oWin.style.display = "block"
+			};
+
+			oLay.onclick = function () {
+				oLay.style.display = "none";
+				oWin.style.display = "none"
+			}
+
+		};
+	</script>
+	<div style="margin-bottom:55px;">
+		<div id="toolbar">
+			<div class="fixed-black"><a class="ui-btn-back" href="javascript:history.go(-1)"></a><a class="ui-btn-home ui-btn-center"
+				href="/"></a><a class="ui-btn-menu" id="popmenu">视频介绍</a>
+			</div>
+		</div>
+		<div id="overlay"></div>
+		<div id="window">
+			<ul class="windowlist">
+				<li><a href="xmjs.html"><span>项目介绍</span></a>
+				</li>
+				<li><a href="ljly.html"><span>丽景掠影</span></a>
+				</li>
+				<li><a href="hxqj.html"><span>户型全景</span></a>
+				</li>
+				<li><a href="zxhd.html"><span>最新活动</span></a>
+				</li>
+				<li><a href="yykf.html"><span>预约看房</span></a>
+				</li>
+				<li><a href="xsdt.html"><span>销售动态</span></a>
+				</li>
+				<li><a href="contactus.html"><span>联系我们</span></a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<!--频道导航 结束-->
+</div>
+<!--顶部结束-->
+<div id="content">
+	<div class="video">
+		<!-- 30文章模型 31图片模型 32单页模型 33 链接模型 34视频模型 35下载模型 36产品模型-->
+		<!--频道样式微信样式 0默认, 1图文, 2文字, 3橱窗, 4相册-->
+		<!-- 视频模型-->
+		<!-- 图文样式 列表开始-->
+		<ul class="wxlist"><a href="info/150.html"><li style="width:auto"><div class="InfoTitle">长虹名筑楼盘介绍</div><div class="InfoTime" >2013-04-27</div><div class="InfoSContent"></div><div class="ShowInfo">点击查看详情>></div></li></a>
+			<a
+			href="info/147.html">
+				<li style="width:auto">
+					<div class="InfoTitle">襄樊蓝钻时代楼盘介绍</div>
+					<div class="InfoTime">2013-04-27</div>
+					<div class="InfoSContent"></div>
+					<div class="ShowInfo">点击查看详情>></div>
+				</li>
+				</a>
+		</ul>
+		<div class="page"></div>
+		<!-- 图文样式 列表结束-->
+		<div class="clear"></div>
+		<ul class="wxlist">
+			<li>
+				<form name="frmInfoSearch" method="post" action="/channel/search/l/cn">
+					<div>
+						<input name="Keywords" value="" type="text" placeholder="请输入关键词" />
+					</div>
+					<div>
+						<input name="btnSearch" class="ui-btn-submit" type="submit" value="站内搜索"
+						/>
+					</div>
+					<input type="hidden" name="__hash__" value="e3bcf413e3e7b7d6f61880a06d9c8eef_9899d30c40e8a75634ee6318585b36b9"
+					/>
+				</form>
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--页脚开始-->
+<div id="footer">
+	<!-- 微信分享导引 开始-->
+	<script>
+		function openGuide() {
+			document.getElementById('guide').style.display = 'block';
+		}
+
+		function closeGuide() {
+			document.getElementById('guide').style.display = '';
+		}
+	</script>
+	<div id="guide" onClick="closeGuide()">
+		<img src="images/guide.png">
+	</div>
+	<!-- 微信分享导引 结束-->
+	<div>
+		<ul class="wxlist"><a href="#top"><li><div  class="GoTop"><img src="images/top.png" />回顶部</div></li></a>
+		</ul>
+	</div>
+</div>
+<!--页脚结束-->
+</body>
+
+</html>
